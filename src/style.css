@@ -1,0 +1,475 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --color1: #ffffff;
+    --color2: #000000;
+    --color3: #8f2d56; /* cor primaria*/
+    --color4: #d81159; /* cor secundaria*/
+}
+* {
+    font-family:  Poppins, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;  
+}
+header{
+    position: fixed;
+    display: flex;
+    margin: 10px 10px;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    background-color:var(--color3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+nav{
+    color: var(--color1);
+    display: flex;
+}
+nav ul{
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    padding: 10px;
+    text-transform: capitalize;
+}
+nav ul li a{
+    color: var(--color1);
+}
+.logo{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;    
+    color: var(--color1);
+    width: 60px;
+    height: 60px;
+}
+.logo h1{
+    color: var(--color1);
+}
+#home video{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    filter: brightness(80%);
+    z-index: -1;
+}
+#txt-home{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: var(--color1);
+    max-width: 500px;
+}
+.titulo-principal{
+    max-width: max-content;
+    padding: 10px;
+    line-height: 30px;
+    margin: 20px 10px;
+    margin-top: 120px;
+}
+.titulo-principal h1{
+    color: var(--color3);
+    font-size: 2em;
+    font-weight: bolder;
+}
+.titulo-principal p{
+    color: var(--color3);
+    font-size: 1em;
+    font-weight: light;
+}
+.titulo-principal #line{
+    width: 30%;
+    height: 5px;
+    border: 2px;
+    background-color: var(--color3);
+}
+.container-contato{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    z-index: 1;
+    top: 100px;
+}
+.titulo-principal-contato{
+    width: 50%;
+    height: max-content;
+    padding: 10px;
+    line-height: 30px;
+    margin: 20px 10px;
+    /* margin-top: 120px; */
+}
+.titulo-principal-contato h1{
+    color: var(--color1);
+    font-size: 2em;
+    font-weight: bolder;
+}
+.titulo-principal-contato p{
+    color: var(--color1);
+    font-size: 1em;
+    font-weight: light;
+}
+.titulo-principal-contato #line{
+    width: 30%;
+    height: 5px;
+    border: 2px;
+    background-color: var(--color1);
+}
+.formulario-contato{
+    width: 30%;
+    padding: 10px;
+    line-height: 30px;
+    margin: 20px 10px;
+
+}
+.formulario-contato form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+.formulario-contato form input{
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffffb0;
+}
+.formulario-contato form input:focus{
+    outline: none;
+}
+
+.formulario-contato form textarea:focus{
+    outline: none;
+}
+.formulario-contato form textarea{
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffffb0;
+}
+.formulario-contato form #form-button{
+    border: none;
+    width: 100px;
+    min-width: 100px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: var(--color4);
+    transition: 0.5s ease;
+    color: var(--color2);
+    cursor: pointer;
+}
+#txt-home h2{
+    white-space: nowrap;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#txt-home p{
+    font-weight: 200;
+    letter-spacing: 1.2px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+#buscar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#buscar input{
+    border: none;
+    width: 90%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: #e7e7e7cb;
+    transition: 0.5s ease;
+}
+#buscar input:focus{
+    border: none;
+    outline: none;
+    background-color:var(--color1);
+}
+#buscar button{
+    border: none;
+    width: 25%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: var(--color4);
+    transition: 0.5s ease;
+    color: var(--color2);
+    cursor: pointer;
+}
+#buscar button:hover{
+    background-color: var(--color3);
+    color: var(--color1);
+}
+.card-section{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    align-self: center;
+    margin-bottom: 30px;
+    width: 90%;
+    justify-content: center;
+}
+.card-destino{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    margin: auto;
+
+}
+.card-destino img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+}
+
+.card-destino{
+    color: var(--color1);
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0 10px;
+}
+
+.card-destino, .descricao{
+    color: var(--color1);
+    font-size: 1em;
+    font-weight: 300;
+    margin-left: 10px;
+}
+.card-detalhes{
+    display: column;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 700px;
+    height: max-content;
+    margin: 0;
+    top: 0;
+    color: var(--color2);
+    padding: 20px;
+    background-color: var(--color3);
+    border-radius: 5px;
+    border-bottom: 5px var(--color4)    outset;
+}
+.card-detalhes #title{
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: var(--color1);
+}
+.card-detalhes p{
+    margin-bottom: 10px;
+    color: var(--color1);
+}
+.card-detalhes h1{
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.card-destino-action h1:first-child{
+    text-decoration: line-through;
+}
+.card-destino-action h1{
+    color: var(--color1);
+}
+.card-destino-action button{
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: var(--color4);
+    transition: 0.5s ease;
+    color: var(--color2);
+    cursor: pointer;   
+}
+.card-desconto{
+    display: flex;
+    margin: auto;
+    
+    margin-bottom: 30px;
+    width: 600px;
+    height: 200px;
+    background-color: transparent;
+}
+.card-desconto .div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+    height: 200px;
+    width: 200px;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 0px 0px 5px #0000004f;
+}
+.card-desconto .div1 h1{
+    color: var(--color1);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.377);
+    font-size: 3em;
+}
+.card-desconto .div2{
+    background-color: var(--color1);
+    height: 200px   ;
+    width: 400px;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 0px 5px #0000004f;
+    padding: 10px;
+}
+
+.card-desconto .div2 h1{
+    font-size: 1.5em;
+    color: var(--color3);
+    font-style: bold;
+    margin-bottom: 0px  ;
+    
+
+}
+.card-desconto .div2 h2{
+    font-size: 1.2em;
+    color: var(--color3);
+    font-style: italic;
+}
+
+.card-desconto .div2 p{
+    font-size: 1em;
+    color: var(--color3);
+    line-height: 20px;
+    margin-top: 10px;
+}
+.card-desconto .action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.card-desconto .action button{
+    font-size: 1.2em;
+    color: var(--color3);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 10px 0px;
+}
+.card-desconto .action h2{
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--color3);
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+#contato-bg img{
+    position: absolute;
+    background-position: center;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color3);
+}
+footer p{
+    font-weight: 200;
+    padding: 5px;
+    color: var(--color1);
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    margin: auto;
+}
+footer div h1{
+    color: var(--color1);
+    font-size: 1.5em;
+    border-bottom: solid 1px var(--color4);
+    font-weight: 400;
+    color: var(--color4);
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+}
+footer ul li a{
+    padding: 10px;
+    color: var(--color1);
+}
+footer div:nth-child(2){
+    border-top: solid 1px var(--color4);
+
+}
+@media (max-width: 1000px){
+    header{
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        margin: 10px auto 10px auto;
+        border-radius: 5px;
+
+    }
+    .container-contato{
+        flex-direction: column;
+    }
+    .formulario-contato{
+        width: 80%;
+        margin: auto;
+    }
+    
+    body{
+        width: 100vw;
+    }
+    #contato-bg{
+        display: none;
+    }
+    .card-detalhes{
+        width: 100%;
+        margin: 0px;
+    }
+    .card-section div > img{
+        transform: rotate(5deg);
+        margin-bottom: 0px;
+    }
+    .card-section{
+        width: 80%;
+    }
+}
